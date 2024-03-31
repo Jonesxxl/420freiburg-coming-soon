@@ -1,0 +1,6 @@
+/* bud3d.component.css */
+div {
+  width: 100%;
+  height: 100vh; /* Adjust based on your layout needs */
+  display: block;
+}
