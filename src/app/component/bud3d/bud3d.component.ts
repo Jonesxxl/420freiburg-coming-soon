@@ -74,8 +74,11 @@ export class Bud3dComponent implements OnInit, AfterViewInit {
    */
   private createControls = () => {
     const renderer = new CSS2DRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.domElement.style.top = '0px';
+    const width = window.innerWidth * 0.25; // 75% der Fensterbreite
+    const height = window.innerHeight * 0.25; // 75% der Fensterhöhe
+    renderer.setSize(width, height);
+    renderer.domElement.style.position = 'absolute';
+    renderer.domElement.style.top = '7rem';
     document.body.appendChild(renderer.domElement);
     this.controls = new OrbitControls(this.camera, renderer.domElement);
     this.controls.autoRotate = true;
