@@ -1,37 +1,7 @@
-<div class="container mx-auto p-4">
-  <div class="header py-8 text-center">
-    <h2 class="text-4xl font-semibold italic text-green-600">420freiburg</h2>
-  </div>
-  <hr class="border-green-500">
-
-  <!-- Combined container for 3D component and the header -->
-  <div class="flex flex-wrap justify-between items-start">
-    <div class="w-full md:flex-1 p-4">
-      <app-bud3d></app-bud3d>
-    </div>
-
-    <div class="w-full md:flex-1 p-4">
-      <h2 class="text-2xl font-medium text-green-700 mt-4 md:mt-0 mb-2">Deine Sorte<br>Unsere Qualität</h2>
-    </div>
-  </div>
-
-  <!-- Form Section -->
-  <div class="w-full p-4">
-    <h2 class="text-3xl font-semibold text-center text-green-700 mb-6">Warteliste</h2>
-    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="max-w-md mx-auto">
-      <div class="mb-4">
-        <input type="email" formControlName="email" placeholder="Deine E-Mail" class="appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline focus:border-green-500">
-      </div>
-      <div class="mb-6">
-        <input type="text" formControlName="name" placeholder="Dein Name" class="appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline focus:border-green-500">
-      </div>
-      <div class="flex justify-center">
-        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transform transition-colors duration-300 ease-in-out">
-          Beitreten
-        </button>
-      </div>
-    </form>
-  </div>
-
-  <hr class="border-green-500">
-</div>
+<app-nav></app-nav>
+<app-hero></app-hero>
+<hr class="border-green-500 mx-4">
+<app-home></app-home>
+<hr class="border-green-500 mx-4">
+<app-waitlist></app-waitlist>
+<app-footer></app-footer>
